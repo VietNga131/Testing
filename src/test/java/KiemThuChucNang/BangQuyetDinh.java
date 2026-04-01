@@ -1,3 +1,5 @@
+package KiemThuChucNang;
+
 import java.util.Arrays;
 import java.util.Collection;
 
@@ -37,9 +39,9 @@ public class BangQuyetDinh {
                 { 100, 300, false, "Bão nguy hiểm" },
                 { 100, 700, false, "Bão nguy hiểm" },
                 { 50, 300, false, "Cảnh báo thời tiết xấu" },
-                { 50, 300, true, "Bão nguy hiểm" }, 
+                { 50, 300, true, "Bão nguy hiểm" },
                 { 100, 100, false, "Cảnh báo thời tiết xấu" },
-                { 80, 100, false, "Bình thường" },              
+                { 80, 100, false, "Bình thường" },
                 { 80, 300, false, "Cảnh báo thời tiết xấu" },
                 { 50, 100, false, "Bình thường" },
                 { 50, 100, true, "Cảnh báo thời tiết xấu" }
@@ -50,7 +52,7 @@ public class BangQuyetDinh {
     public void testDecisionTable() {
         String actualOutput = Storm.stormAssessment(speed, rainfall, region);
         String errorMessage = String.format("Failed tại input: speed=%d, rainfall=%d, region=%b", speed, rainfall, region);
-        
+
         assertEquals(errorMessage, eOutput, actualOutput);
     }
 }
