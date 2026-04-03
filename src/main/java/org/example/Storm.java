@@ -32,19 +32,25 @@ public class Storm {
         boolean C3 = region;             // Ven biển
 
         int count = 0;
-        if (C1) count++;
-        if (C2) count++;
-        if (C3) count++;
+        
+        boolean[] conditions = {C1, C2, C3};
+
+        for (int i = 0; i < 3; i++) {
+            if (conditions[i]) {
+                count++;
+            }
+        }
 
         // ===== Bước 5: Decision Logic =====
-        if (count == 3) {
-            return "Khẩn cấp - Yêu cầu sơ tán";
-        } else if (count == 2) {
-            return "Bão nguy hiểm";
-        } else if (count == 1) {
-            return "Cảnh báo thời tiết xấu";
-        } else {
-            return "Bình thường";
+        switch (count) {
+            case 3:
+                return "Khẩn cấp - Yêu cầu sơ tán";
+            case 2:
+                return "Bão nguy hiểm";
+            case 1:
+                return "Cảnh báo thời tiết xấu";
+            default:
+                return "Bình thường";
         }
     }
 
