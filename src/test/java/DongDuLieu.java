@@ -1,7 +1,7 @@
 import java.util.Arrays;
 import java.util.Collection;
 
-import org.example.Storm;
+import org.example.Stormm;
 import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -31,7 +31,7 @@ public class DongDuLieu {
 
     @Test
     public void testDongDieuKhien() {
-        String actualOutput = Storm.stormAssessment(speed, rainfall, region);
+        String actualOutput = Stormm.stormAssessment(speed, rainfall, region);
         String errorMessage = String.format("Failed tại input: speed=%d, rainfall=%d, region=%b", speed, rainfall, region);
 
         assertEquals(errorMessage, eOutput, actualOutput);
